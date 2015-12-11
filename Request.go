@@ -110,15 +110,13 @@ func main() {
 
 		panic(err)
 	}
-	openFile(strings.Trim(s, " "), rs.Token)
+	openFile(s, rs.Token)
 }
 func openFile(path string, Token string) {
 
-	var paths string
-	paths = string(path)
-	fmt.Println(paths)
+	fmt.Println(path)
 
-	file, err := os.Open(paths)
+	file, err := os.Open(path)
 	if err != nil {
 		panic(err)
 	}
